@@ -4,5 +4,3 @@ let gradeTable = new GradeTable(tableElement);
 let app = new App(gradeTable);
 
 app.start();
-
-console.log(tableElement);
