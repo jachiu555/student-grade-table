@@ -1,6 +1,8 @@
-let tableElement = document.getElementById("table");
+let tableElement = document.getElementsByClassName("table")[0];
 let gradeTable = new GradeTable(tableElement);
 
 let app = new App(gradeTable);
 
 app.start();
+
+console.log(tableElement);
