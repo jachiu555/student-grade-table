@@ -23,9 +23,7 @@ class App {
       averageGrade = totalGrade / grades.length;
     };
 
-    this.pagerHeader.updateAverage(averageGrade);
-
-    console.log(averageGrade);
+    this.pageHeader.updateAverage(averageGrade);
   };
 
   getGrades() {

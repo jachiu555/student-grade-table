@@ -4,6 +4,9 @@ class PageHeader {
   };
 
   updateAverage(newAverage) {
-    console.log(newAverage);
+    let badgeElement = this.headerElement.querySelector("span");
+    badgeElement.innerHTML = "";
+
+    badgeElement.textContent = newAverage;
   };
 };
