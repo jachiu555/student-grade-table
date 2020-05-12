@@ -19,9 +19,9 @@ class App {
 
     for (let i = 0; i < grades.length; i++) {
       totalGrade += grades[i].grade;
-
-      averageGrade = totalGrade / grades.length;
     };
+
+    averageGrade = totalGrade / grades.length;
 
     this.pageHeader.updateAverage(averageGrade);
   };
