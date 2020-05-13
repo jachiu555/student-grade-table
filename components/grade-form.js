@@ -4,7 +4,7 @@ class GradeForm {
 
     this.handleSubmit = this.handleSubmit.bind(this);
 
-    this.formElement.submit(this.handleSubmit);
+    this.formElement.onSubmit = this.handleSubmit;
   };
 
   onSubmit(createGrade) {
@@ -15,4 +15,4 @@ class GradeForm {
     event.preventDefault();
     console.log("hi");
   };
-}
+};
