@@ -41,6 +41,18 @@ class App {
     });
   };
 
+  createGrade(name, course, grade) {
+    console.log(name, course, grade);
+  };
+
+  handleCreateGradeError(error) {
+    console.error(error);
+  };
+
+  handleCreateGradeSuccess() {
+    this.getGrades();
+  };
+
   start() {
     this.getGrades();
   }
