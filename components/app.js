@@ -45,7 +45,21 @@ class App {
   };
 
   createGrade(name, course, grade) {
-    console.log(name, course, grade);
+    $.ajax({
+      method: "POST",
+      url: "https://sgt.lfzprototypes.com/api/grades",
+      timeout: 2000,
+      headers: {
+        "X-Access-Token": "Npew7LVS"
+      },
+      data: {
+        "name": name,
+        "course": course,
+        "grade": grade
+      },
+      success: this.handleCreateGradeSuccess,
+      error: this.handleCreateGradeError
+    });
   };
 
   handleCreateGradeError(error) {
