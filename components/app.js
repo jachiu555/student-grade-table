@@ -62,11 +62,23 @@ class App {
     });
   };
 
+  deleteGrade(id) {
+    console.log(id);
+  };
+
   handleCreateGradeError(error) {
     console.error(error);
   };
 
   handleCreateGradeSuccess() {
+    this.getGrades();
+  };
+
+  handleDeleteGradeError(error) {
+    console.log(error);
+  };
+
+  handleDeleteGradeSuccess() {
     this.getGrades();
   };
 
