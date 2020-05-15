@@ -29,6 +29,27 @@ class GradeTable {
   };
 
   renderGradeRow(data, deleteGrade) {
+    let deleteGradeRow = document.createElement("tr");
+    let deleteButton = document.createElement("button");
+    let newName = document.createElement("td");
+    let newCourse = document.createElement("td");
+    let newGrade = document.createElement("td");
 
+    newName.textContent = data.name;
+    newCourse.textContent = data.course;
+    newGrade.textContent = data.grade;
+
+    deleteButton.innerHTML = "Delete";
+    deleteButton.style.class = "btn btn-danger";
+    deleteButton.addEventListener("click", function() {
+      deleteGrade(data.id);
+    });
+
+    newGradeRow.append(deleteButton);
+    newGradeRow.append(newName);
+    newGradeRow.append(newCourse);
+    newGradeRow.append(newGrade);
+
+    return newGradeRow;
   };
 };
