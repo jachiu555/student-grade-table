@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   </head>
 
   <body>
@@ -13,19 +14,55 @@
     </header>
 
     <div class="container">
-      <table class="table table-striped">
-        <thead class="table thead-dark">
-          <tr>
-            <th>Student Name</th>
-            <th>Course</th>
-            <th>Grade</th>
-          </tr>
-        </thead>
+      <div class="row">
+        <div class="col-sm-8">
+          <table class="table table-striped">
+            <thead class="table thead-dark">
+              <tr>
+                <th>Student Name</th>
+                <th>Course</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
 
-        <tbody>
+            <tbody>
 
-        </tbody>
-      </table>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-4">
+          <form class="form">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" name="name">
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="far fa-list-alt"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="Course" aria-label="Course" aria-describedby="basic-addon1" name="course">
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-graduation-cap"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="Grade" aria-label="Grade" aria-describedby="basic-addon1"
+                name="grade">
+            </div>
+
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary submit">Submit</button>
+              <button type="reset" class="btn btn-secondary reset">Cancel</button>
+            </div>
+          </form>
+        </div>
+    </div>
+
     </div>
 
   </body>
@@ -33,5 +70,6 @@
   <script src="components/page-header.js"></script>
   <script src="components/app.js"></script>
   <script src="components/grade-table.js"></script>
+  <script src="components/grade-form.js"></script>
   <script src="main.js"></script>
 </html>
