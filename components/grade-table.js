@@ -10,12 +10,15 @@ class GradeTable {
     tBody.innerHTML = "";
 
     for (let i = 0; i < grades.length; i++) {
-
       tBody.append(this.renderGradeRow(grades[i], this.deleteGrade));
+    };
 
-      // if (grades.length > 1) {
+    let pElement = document.querySelector("p");
 
-      // };
+    if (grades.length > 1) {
+      pElement.style.display = "block";
+    } else {
+      pElement.style.display = "none";
     };
   };
 
