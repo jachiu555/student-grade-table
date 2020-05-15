@@ -13,12 +13,10 @@ class GradeTable {
       tBody.append(this.renderGradeRow(grades[i], this.deleteGrade));
     };
 
-    let pElement = this.noGradesElement;
-
     if (grades.length != 0) {
-      pElement.classList.add("d-none");
+      this.noGradesElement.classList.add("d-none");
     } else {
-      pElement.classList.remove("d-none");
+      this.noGradesElement.classList.remove("d-none");
     };
   };
 
