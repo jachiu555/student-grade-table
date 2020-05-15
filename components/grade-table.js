@@ -15,10 +15,10 @@ class GradeTable {
 
     let pElement = document.querySelector("p");
 
-    if (grades.length > 1) {
-      pElement.style.display = "block";
+    if (grades.length != 0) {
+      pElement.classList.add("d-none");
     } else {
-      pElement.style.display = "none";
+      pElement.classList.remove("d-none");
     };
   };
 
@@ -38,7 +38,7 @@ class GradeTable {
     newGrade.textContent = data.grade;
 
     deleteButton.innerHTML = "Delete";
-    deleteButton.style = "btn btn-danger";
+    deleteButton.classList.add("btn-danger");
     deleteButton.addEventListener("click", function() {
       deleteGrade(data.id);
     });
